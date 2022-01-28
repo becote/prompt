@@ -10,9 +10,8 @@ if ($host.Name -eq 'ConsoleHost')
 Import-Module -Name Terminal-Icons
 set-alias desktop "Desktop.ps1"
 #Set-Theme ParadoxGlucose
-#Set-PoshPrompt -theme "D:\Dropbox\poshv3.json"
 
-oh-my-posh --init --shell pwsh --config "C:\github\prompt\Themes\ohmyposhvcustom.json" | Invoke-Expression
+oh-my-posh --init --shell pwsh --config "C:\ohmyposh\Themes\ohmyposhvcustom.json" | Invoke-Expression
 
 
 Register-ArgumentCompleter -Native -CommandName winget -ScriptBlock {

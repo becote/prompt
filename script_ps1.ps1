@@ -6,9 +6,12 @@ winget install JanDeDobbeleer.OhMyPosh
 winget upgrade JanDeDobbeleer.OhMyPosh
 
 
-#Create PowershellProfile
-New-Item -ItemType "directory" -Path "c:\ps-test\script\" -Force
+#Git Clone
 
-git clone 
+git clone https://github.com/becote/prompt.git c:\ohmyposh\
 
+#Move profile
 
+New-Item -Path $profile -ItemType "file" -Force
+
+Move-Item -Path "C:\ohmyposh\Profile\Microsoft.PowerShell_profile.ps1" -Destination "C:\Users\$env:USERNAME\Documents\PowerShell"
